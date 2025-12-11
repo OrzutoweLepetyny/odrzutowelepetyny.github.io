@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOGOWIE BLIZN | WI AGH METAL</title>
+    <title>ORZUTOWE ŁEPETYNY | WI AGH METAL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
         body {
             background-color: var(--void-black);
             color: var(--text-light);
-            font-family: 'Roboto Mono', monospace; /* Nawiązanie do kodowania */
+            font-family: 'Roboto Mono', monospace;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -40,7 +40,7 @@
         /* --- HEADER & HERO --- */
         header {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
-                        url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop'); /* Placeholder: Kod/Serwery */
+                        url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -53,11 +53,14 @@
         }
 
         .logo {
-            font-size: 5rem;
-            color: var(--maiden-yellow); /* Kolorystyka Maiden */
+            /* Zmniejszyłem lekko czcionkę, bo nazwa jest dłuższa */
+            font-size: 4rem; 
+            color: var(--maiden-yellow);
             text-shadow: 4px 4px 0px var(--maiden-red), 8px 8px 10px black;
             margin-bottom: 20px;
             animation: pulse 3s infinite;
+            line-height: 1.2;
+            padding: 0 10px;
         }
 
         .tagline {
@@ -111,7 +114,7 @@
             padding-bottom: 10px;
         }
 
-        /* --- O NAS (WI AGH STYLE) --- */
+        /* --- O NAS --- */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -130,6 +133,7 @@
 
         .cmd { color: var(--maiden-yellow); }
         .string { color: #a5d6ff; }
+        .keyword { color: #ff79c6; }
 
         /* --- DYSKOGRAFIA --- */
         .tracklist {
@@ -182,17 +186,15 @@
             color: var(--maiden-red);
         }
 
-        /* Animacje */
         @keyframes pulse {
             0% { text-shadow: 4px 4px 0px var(--maiden-red); }
             50% { text-shadow: 4px 4px 20px var(--maiden-red); }
             100% { text-shadow: 4px 4px 0px var(--maiden-red); }
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .about-content { grid-template-columns: 1fr; }
-            .logo { font-size: 3rem; }
+            .logo { font-size: 2.5rem; } /* Jeszcze mniejsza dla mobile */
             nav { gap: 15px; flex-wrap: wrap; }
         }
     </style>
@@ -207,45 +209,47 @@
     </nav>
 
     <header id="home">
-        <h1 class="logo">BOGOWIE BLIZN</h1>
-        <div class="tagline">WI AGH HARDCORE DIVISION</div>
+        <h1 class="logo">ORZUTOWE<br>ŁEPETYNY</h1>
+        <div class="tagline">WI AGH HEADBANGING SQUAD</div>
         <p style="margin-top: 20px; color: #aaa;">Est. Building D-17</p>
     </header>
 
     <section id="about">
-        <h2 class="section-title">Kuźnia Dusz w C++</h2>
+        <h2 class="section-title">Headbanging & Casting</h2>
         <div class="about-content">
             <div class="text">
-                <p>Powstaliśmy w podziemiach budynku D-17, gdzie szum serwerów miesza się z krzykiem studentów przed sesją. Jesteśmy <strong>BOGOWIE BLIZN</strong>.</p>
+                <p>Powstaliśmy w podziemiach budynku D-17, gdzie rzutowanie wskaźników kończy się Segmentation Faultem. Jesteśmy <strong>ORZUTOWE ŁEPETYNY</strong>.</p>
                 <br>
-                <p>Nasza muzyka to skompilowany gniew, debugowanie rzeczywistości i heavy metal w najczystszej postaci. Inspirowani legendami Iron Maiden, tworzymy brzmienie, które topi procesory.</p>
+                <p>Nasza nazwa to hołd dla najtwardszych głów na wydziale i najniebezpieczniejszych operacji w C++. Gramy tak ciężko, że system operacyjny wchodzi w kernel panic.</p>
                 <br>
-                <p>Gramy hardkorowy metal, ale w naszych żyłach płynie też jazz, blues i dźwięki errorów Windowsa.</p>
+                <p>Mieszamy estetykę Iron Maiden z brutalnym kodowaniem. Jeśli Twoja łepetyna wytrzyma nasze riffy, przetrwasz każdą sesję.</p>
             </div>
             <div class="terminal-box">
-                <p><span class="cmd">root@WI-AGH:~$</span> ./start_band.sh</p>
-                <p>> Loading members...</p>
-                <p>> Guitar: <span class="string">"Segfault" Steve</span></p>
-                <p>> Drums: <span class="string">"DDoS" Dave</span></p>
-                <p>> Vocals: <span class="string">The Compiler</span></p>
-                <p>> Status: <span style="color:red">CRITICAL ERROR (TOO HEAVY)</span></p>
+                <p><span class="cmd">root@WI-AGH:~$</span> ./check_heads.sh</p>
+                <p>> Initializing band...</p>
+                <p>> Band Name: <span class="string">"Orzutowe Łepetyny"</span></p>
+                <p>> <span class="keyword">try</span> { play_metal(); }</p>
+                <p>> <span class="keyword">catch</span> (Exception e) {</p>
+                <p>> &nbsp;&nbsp; <span class="string">cout << "HEAD IS BANGING";</span></p>
+                <p>> }</p>
+                <p>> Status: <span style="color:red">HARDCORE</span></p>
             </div>
         </div>
     </section>
 
     <section id="music">
-        <h2 class="section-title">Lista Zniszczenia</h2>
+        <h2 class="section-title">Lista Wyjątków</h2>
         <ul class="tracklist">
             <li class="track">
                 <span class="track-title">1. The Number of the Beast (Is 404)</span>
                 <span class="track-meta">Hardcore Metal / 4:20</span>
             </li>
             <li class="track">
-                <span class="track-title">2. Infinite Loop of Agony</span>
+                <span class="track-title">2. Stack Overflow (In My Head)</span>
                 <span class="track-meta">Thrash / 3:33</span>
             </li>
             <li class="track">
-                <span class="track-title">3. Ballada o Warunku</span>
+                <span class="track-title">3. Ballada o Rzutowaniu</span>
                 <span class="track-meta">Acoustic Doom / 5:15</span>
             </li>
             <li class="track">
@@ -264,15 +268,15 @@
 
     <section id="contact" style="text-align: center;">
         <h2 class="section-title">Wezwij Nas</h2>
-        <p>Chcesz nas na juwenalia albo do piwnicy? Pisz.</p>
-        <p style="font-size: 1.5rem; margin-top: 20px; font-family: 'Metal Mania'; color: var(--maiden-yellow);">
-            booking@bogowieblizn.agh.edu.pl
+        <p>Chcesz, żebyśmy zagrali na Twoim afterze po kolosie? Pisz.</p>
+        <p style="font-size: 1.5rem; margin-top: 20px; font-family: 'Metal Mania'; color: var(--maiden-yellow); word-break: break-all;">
+            booking@orzutowelepetyny.agh.edu.pl
         </p>
     </section>
 
     <footer>
-        <p>&copy; 2024 BOGOWIE BLIZN. Up the Irons! Up the WI!</p>
-        <p style="font-size: 0.8rem; color: #555;">Strona nie jest oficjalnym serwisem AGH (jeszcze).</p>
+        <p>&copy; 2024 ORZUTOWE ŁEPETYNY. Up the Irons! Up the WI!</p>
+        <p style="font-size: 0.8rem; color: #555;">Strona nie jest oficjalnym serwisem AGH.</p>
     </footer>
 
 </body>
