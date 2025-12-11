@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUZYKA | ORZUTOWE ŁEPETYNY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --maiden-red: #b91d1d;
+            --maiden-yellow: #facc15;
+            --void-black: #0a0a0a;
+            --code-grey: #1f2937;
+            --text-light: #e5e5e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--text-light);
+            font-family: 'Roboto Mono', monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Metal Mania', cursive;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- NAWIGACJA --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            z-index: 1000;
+            border-bottom: 1px solid var(--maiden-red);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--maiden-yellow);
+            text-decoration: none;
+            font-family: 'Metal Mania', cursive;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--maiden-red);
+            text-shadow: 0 0 10px var(--maiden-red);
+        }
+
+        /* --- CONTENT --- */
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--maiden-yellow);
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 0 var(--maiden-red);
+        }
+
+        .album {
+            background: var(--code-grey);
+            border: 2px solid var(--maiden-red);
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .album-title {
+            font-size: 2rem;
+            color: var(--maiden-red);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--maiden-yellow);
+            padding-bottom: 10px;
+        }
+
+        .song-list {
+            list-style: none;
+        }
+
+        .song-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.3s;
+        }
+
+        .song-item:hover {
+            background: rgba(185, 29, 29, 0.1);
+        }
+
+        .song-title {
+            font-size: 1.1rem;
+            flex-grow: 1;
+        }
+
+        audio {
+            width: 300px;
+            height: 40px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: var(--maiden-yellow);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #000;
+            border-top: 2px solid var(--maiden-red);
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html#home">START</a>
+        <a href="index.html#about">O NAS</a>
+        <a href="index.html#music">UTWORY</a>
+        <a href="music.html">ODTWARZACZ</a>
+        <a href="index.html#contact">KONTAKT</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Dyskografia</h1>
+
+        <div class="album">
+            <h2 class="album-title">MonsterBot</h2>
+            <ul class="song-list">
+                <li class="song-item">
+                    <span class="song-title">Ballada o monsterbocie</span>
+                    <audio controls>
+                        <source src="MonsterBot/Ballada o monsterbocie.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+            </ul>
+        </div>
+
+        <div class="album">
+            <h2 class="album-title">Semestr 3</h2>
+            <ul class="song-list">
+                <li class="song-item">
+                    <span class="song-title">Malutki Idzik i Java</span>
+                    <audio controls>
+                        <source src="Semestr 3/Malutki Idzik i Java.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Mokre Kluchy</span>
+                    <audio controls>
+                        <source src="Semestr 3/Mokre Kluchy.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Hubik Zatracony</span>
+                    <audio controls>
+                        <source src="Semestr 3/hubik zatracony.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Na parkiecie ścisk, wchodzę jak boss</span>
+                    <audio controls>
+                        <source src="Semestr 3/Na parkiecie ścisk, wchodzę jak boss, .mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Interaktywny Rebase</span>
+                    <audio controls>
+                        <source src="Semestr 3/Interaktywny Rebase.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Księżniczka Kędzior i Fortuna Artura</span>
+                    <audio controls>
+                        <source src="Semestr 3/Księżniczka Kędzior i Fortuna Artura.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Rutkowski przed tablicą</span>
+                    <audio controls>
+                        <source src="Semestr 3/Rutkowski przed tablicą.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Woźniak Wikingiem</span>
+                    <audio controls>
+                        <source src="Semestr 3/Woźniak Wikingiem.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Hubik w Komorze Próżniowej</span>
+                    <audio controls>
+                        <source src="Semestr 3/Hubik w Komorze Próżniowej.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">TPP Ćwiczeniówka</span>
+                    <audio controls>
+                        <source src="Semestr 3/TPP ćwiczeniówka.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <span class="song-title">Hubik Próżniowy</span>
+                    <audio controls>
+                        <source src="Semestr 3/hubik_prozniowy.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ORZUTOWE ŁEPETYNY. WSZELKIE PRAWA ZASTRZEŻONE. KODOWANIE TO METAL.</p>
+    </footer>
+
+</body>
+</html>
